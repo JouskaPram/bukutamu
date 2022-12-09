@@ -17,7 +17,7 @@
               required
             />
           </div>
-          <!-- <div class="mb-5">
+          <div class="mb-5">
          
             <input
               v-model="form.email"
@@ -28,7 +28,7 @@
               class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               required
             />
-          </div> -->
+          </div>
           <div class="mb-5">
            
             <input
@@ -59,7 +59,7 @@
             >
               Submit
             </button>
-            <router-link to="/home" class="py-3 px-5 bg-rose-600 text-xl font-bold mx-4 text-white rounded-md outline-none">Kembali</router-link>
+            <router-link to="/" class="py-3 px-5 bg-rose-600 text-xl font-bold mx-4 text-white rounded-md outline-none">Kembali</router-link>
           </div>
         </form>
       </div>

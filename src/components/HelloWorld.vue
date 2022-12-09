@@ -9,11 +9,11 @@
             >
               Nama
             </th>
-            <th
+            <!-- <th
               class="border border-slate-500 text-xl font-bold text-center text-white"
             >
               Email
-            </th>
+            </th> -->
             <th
               class="border border-slate-500 text-xl font-bold text-center text-white"
             >
@@ -33,11 +33,11 @@
             >
               {{ user.nama }}
             </td>
-            <td
+            <!-- <td
               class="border border-slate-500 text-xl first-letter: font-semibold text-white"
             >
               {{ user.email }}
-            </td>
+            </td> -->
             <td
               class="border border-slate-500 text-xl first-letter: font-semibold text-white"
             >
@@ -70,7 +70,7 @@ export default {
     async getUser() {
       let { data, error } = await this.$supabase
         .from("absen")
-        .select("id,created_at,nama,asal,email,pesan");
+        .select("id,created_at,nama,asal,pesan");
       this.users = data;
     },
   },

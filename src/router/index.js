@@ -10,11 +10,11 @@ const routes = [
     name: "home",
     component: HomeView,
   },
-  {
-    path: "/home",
-    name: "two-side",
-    component: ()=> import('@/views/two-side.vue'),
-  },
+  // {
+  //   path: "/home",
+  //   name: "two-side",
+  //   component: ()=> import('@/views/two-side.vue'),
+  // },
   {
     path: "/tambah",
     name: "tambah",
