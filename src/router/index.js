@@ -6,12 +6,12 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/home",
+    path: "/",
     name: "home",
     component: HomeView,
   },
   {
-    path: "/",
+    path: "/home",
     name: "two-side",
     component: ()=> import('@/views/two-side.vue'),
   },
