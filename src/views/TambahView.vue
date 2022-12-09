@@ -12,12 +12,12 @@
               type="text"
               name="name"
               id="name"
-              placeholder="Full Name"
+              placeholder="Nama Lengkap"
               class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               required
             />
           </div>
-          <div class="mb-5">
+          <!-- <div class="mb-5">
          
             <input
               v-model="form.email"
@@ -28,7 +28,7 @@
               class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               required
             />
-          </div>
+          </div> -->
           <div class="mb-5">
            
             <input
@@ -36,7 +36,7 @@
               type="text"
               name="subject"
               id="subject"
-              placeholder="Enter your subject"
+              placeholder=""
               class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               required
             />
@@ -48,7 +48,7 @@
               rows="4"
               name="message"
               id="message"
-              placeholder="Type your message"
+              placeholder="Masukan Pesan"
               class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               required
             ></textarea>
