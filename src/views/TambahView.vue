@@ -24,9 +24,8 @@
               type="email"
               name="email"
               id="email"
-              placeholder="example@domain.com"
+              placeholder="contoh@sekolah.sch.id (opsional)"
               class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-              required
             />
           </div>
           <div class="mb-5">
@@ -36,7 +35,7 @@
               type="text"
               name="subject"
               id="subject"
-              placeholder=""
+              placeholder="Instansi"
               class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
               required
             />
@@ -55,9 +54,11 @@
           </div>
           <div>
             <button
+              :disabled="send"
               class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-xl font-semibold text-white outline-none"
             >
-              Submit
+              <span v-if="!send">Simpan</span>
+              <span v-else>Menyimpan...</span>
             </button>
             <router-link to="/" class="py-3 px-5 bg-rose-600 text-xl font-bold mx-4 text-white rounded-md outline-none">Kembali</router-link>
           </div>
@@ -72,6 +73,7 @@ import supabase from "vue-supabase";
 export default {
   data() {
     return {
+      send: false,
       form: {
         id:"",
         nama: "",
@@ -86,6 +88,7 @@ export default {
   },
   methods: {
     async postAbsen() {
+      this.send = true
       const { data, error } = await this.$supabase.from("absen").insert({
   
         nama: this.form.nama,
@@ -94,7 +97,10 @@ export default {
         pesan: this.form.pesan,
       });
       this.form = data;
-    
+      if(data) {
+        this.send = false
+        this.$router.push('/')
+      }
 
       if (error) throw error;
     },

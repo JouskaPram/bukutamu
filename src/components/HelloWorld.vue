@@ -5,15 +5,15 @@
         <thead class="h-10 bg-[#0284c7]">
           <tr>
             <th
+              class="border border-slate-500 text-xl font-bold text-center text-white"
+            >
+              #
+            </th>
+            <th
               class="border border-slate-500 text-xl font-bold text-center text-white py-5"
             >
               Nama
             </th>
-            <!-- <th
-              class="border border-slate-500 text-xl font-bold text-center text-white"
-            >
-              Email
-            </th> -->
             <th
               class="border border-slate-500 text-xl font-bold text-center text-white"
             >
@@ -34,15 +34,15 @@
           </tr>
           <tr v-for="user in users" :key="user.id">
             <td
+              class="border border-slate-500 text-xl first-letter: font-semibold text-white"
+            >
+              {{ user.id }}
+            </td>
+            <td
               class="border border-slate-500 text-xl font-semibold text-white py-3"
             >
               {{ user.nama }}
             </td>
-            <!-- <td
-              class="border border-slate-500 text-xl first-letter: font-semibold text-white"
-            >
-              {{ user.email }}
-            </td> -->
             <td
               class="border border-slate-500 text-xl first-letter: font-semibold text-white"
             >
@@ -77,7 +77,8 @@ export default {
       this.loading = true
       let { data, error } = await this.$supabase
         .from("absen")
-        .select("id,created_at,nama,asal,pesan");
+        .select("id,created_at,nama,asal,pesan")
+        .order('created_at', { ascending: false })
       if(data) {
         this.users = data;
         this.loading = false
