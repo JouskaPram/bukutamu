@@ -28,7 +28,7 @@
         </thead>
         <tbody class=" bg-slate-600">
           <tr>
-            <td v-if="loading" colspan="3" class="py-3 text-white text-xl">
+            <td v-if="loading" colspan="4" class="py-3 text-white text-xl">
               <em>sedang memuat...</em>
             </td>
           </tr>
