@@ -27,6 +27,11 @@
           </tr>
         </thead>
         <tbody class=" bg-slate-600">
+          <tr>
+            <td v-if="loading" colspan="3" class="py-3 text-white text-xl">
+              <em>sedang memuat...</em>
+            </td>
+          </tr>
           <tr v-for="user in users" :key="user.id">
             <td
               class="border border-slate-500 text-xl font-semibold text-white py-3"
@@ -61,6 +66,7 @@ export default {
   data() {
     return {
       users: "",
+      loading: true,
     };
   },
   mounted() {
@@ -68,10 +74,14 @@ export default {
   },
   methods: {
     async getUser() {
+      this.loading = true
       let { data, error } = await this.$supabase
         .from("absen")
         .select("id,created_at,nama,asal,pesan");
-      this.users = data;
+      if(data) {
+        this.users = data;
+        this.loading = false
+      }
     },
   },
 };
