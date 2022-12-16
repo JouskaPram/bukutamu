@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link to="/tambah" class="py-3 px-5 text-bold text-xl bg-sky-600 text-white rounded-md hover:bg-sky-500 hover:animation duration-1000">Isi Buku tamu</router-link>
-      <table class="w-full border-collapse border border-slate-500 text-center mt-5">
+      <table class="w-full border-collapse border border-slate-500  mt-5">
         <thead class="h-10 bg-[#0284c7]">
           <tr>
             <th
