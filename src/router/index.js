@@ -15,15 +15,15 @@ const routes = [
   //   name: "two-side",
   //   component: ()=> import('@/views/two-side.vue'),
   // },
-  {
-    path: "/tambah",
-    name: "tambah",
+  // {
+  //   path: "/tambah",
+  //   name: "tambah",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/TambahView.vue"),
-  },
+  //   component: () =>
+  //     import(/* webpackChunkName: "about" */ "../views/TambahView.vue"),
+  // },
 ];
 
 const router = new VueRouter({
