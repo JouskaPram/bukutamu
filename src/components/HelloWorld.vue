@@ -3,15 +3,15 @@
     <!-- <router-link to="/tambah" class="py-3 px-5 text-bold text-sm bg-sky-600 text-white rounded-md hover:bg-sky-500 hover:animation duration-1000">Isi Buku tamu</router-link> -->
     <div v-if="users.length < 1" class="mb-5 text-xl text-white"><em>sedang memuat...</em></div>
     <div v-else class="mb-5 text-bold text-sm text-white">Menampilkan {{ users.length }} pesan</div>
-      <table class="w-full border-collapse border border-slate-500  mt-5">
+      <table class="w-full border-collapse border border-slate-500  mt-5 table-auto">
         <thead class="h-10 bg-[#0284c7]">
           <tr>
             <th
               class="border border-slate-500 text-sm font-bold text-center text-white"
             >
-              #
+              Numb.
             </th>
-            <th class="border border-slate-500 text-sm font-bold text-center text-white py-5">Tgl.</th>
+            <th class="border border-slate-500 text-sm font-bold text-center text-white py-5 w-auto">Tanggal</th>
             <th
               class="border border-slate-500 text-sm font-bold text-center text-white py-5"
             >
@@ -41,21 +41,21 @@
             >
               {{ i+1 }}.
             </td>
-            <td class="border border-slate-500 text-sm text-white py-5">
+            <td class="border border-slate-500 text-sm text-white py-5 px-2">
               {{ user.created_at }}
             </td>
             <td
-              class="border border-slate-500 text-sm font-semibold text-white py-3"
+              class="border border-slate-500 text-sm font-semibold text-white py-3 px-2"
             >
               {{ user.nama }}
             </td>
             <td
-              class="border border-slate-500 text-sm first-letter: font-semibold text-white"
+              class="border border-slate-500 text-sm first-letter: font-semibold text-white px-2"
             >
               {{ user.asal }}
             </td>
             <td
-              class="border border-slate-500 text-sm first-letter: font-semibold text-white"
+              class="border border-slate-500 text-sm first-letter: font-semibold text-white px-2"
             >
               {{ user.pesan }}
             </td>
